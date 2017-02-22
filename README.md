@@ -4,7 +4,13 @@
 Docker file and test script for Isilon SDK 8.0
 
 ## Getting Started
-Ensure that you have a working docker setup available or follow this link to get started with docker: https://docs.docker.com/windows/
+Ensure that you have a working docker setup available or follow this link to get started with docker: https://www.docker.com/products/overview
+
+For most modern Linux Distros the following command will install docker for you:
+
+<code>
+curl -sSL https://get.docker.com/ | sh
+</code>
 
 ## Clone the Repo
 On the docker host begin by cloning this repo:
