@@ -8,6 +8,8 @@ RUN pip install urllib3 six certifi
 RUN mkdir /app
 ADD run.py /app
 WORKDIR /app
-run git clone https://github.com/Isilon/isilon_sdk_8_0_python.git
-run ln -s /app/isilon_sdk_8_0_python/isi_sdk /app/
+RUN pip install isi_sdk_8_0_1
+RUN echo "import rlcompleter, readline" >> /root/.pythonrc
+RUN echo "readline.parse_and_bind('tab:complete')" >> /root/.pythonrc
+RUN echo "export PYTHONSTARTUP=~/.pythonrc" >> ~/.bashrc
 CMD ["python", "/app/run.py"]
